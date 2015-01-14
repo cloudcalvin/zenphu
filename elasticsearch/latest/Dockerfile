@@ -11,7 +11,7 @@
 
 
 # Pull base image.
-FROM zenphu/oracle-server-jre:latest
+FROM zenphu/oracle-server-jre:1.8.0_25
 
 MAINTAINER Calvin Maree cloudcalvin@me.com
 
