@@ -18,12 +18,12 @@ MAINTAINER Calvin Maree cloudcalvin@me.com
 #Install ZSH for security reasons . might not be needed, any comments welcome.
 
 RUN \
-	apt-get update && \
-	apt-get install zsh -y && \
-			git-core -y && \
-	curl -L -O https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | zsh && \
-	chsh -s `which zsh` && \
-	apt-get purge git-core -y && \
+	# apt-get update && \
+	# apt-get install zsh -y && \
+	# 		git-core -y && \
+	# curl -L -O https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | zsh && \
+	# chsh -s `which zsh` && \
+	# apt-get purge git-core -y && \
 
 
 # Install ElasticSearch
