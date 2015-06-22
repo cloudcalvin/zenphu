@@ -17,7 +17,7 @@ RUN cd /tmp && \
 RUN cd /opt/spark-notebook && \
     chmod +x ./bin/spark-notebook
 
-#WORKDIR /src/spark-notebooks
+WORKDIR /src/spark-notebooks
 
 # Start the notebook
 CMD [".opt/spark-notebook/bin/spark-notebook"]
