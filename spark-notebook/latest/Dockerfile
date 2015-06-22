@@ -13,6 +13,9 @@ RUN cd /tmp && \
     tar -xzvf ./spark-notebook-0.5.2-scala-2.11.2-spark-1.4.0-hadoop-2.6.0.tgz && \
     mv ./spark-notebook-0.5.2-scala-2.11.2-spark-1.4.0-hadoop-2.6.0 /opt/spark-notebook && \
     rm ./spark-notebook-0.5.2-scala-2.11.2-spark-1.4.0-hadoop-2.6.0.tgz
+    
+RUN cd /opt/spark-notebook && \
+    chmod +x ./bin/spark-notebook
 
 #WORKDIR /src/spark-notebooks
 
