@@ -21,4 +21,3 @@ EXPOSE 9000
 # Start the notebook
 CMD ["/opt/spark-notebook/bin/spark-notebook"]
 
-    
