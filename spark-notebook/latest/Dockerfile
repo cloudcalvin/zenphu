@@ -11,7 +11,7 @@ RUN cd /tmp && \
 RUN cd /opt/spark-notebook && \
     chmod +x ./bin/spark-notebook
 
-WORKDIR /src/spark-notebooks
+#WORKDIR /src/spark-notebooks
 
 ENV OUTPUT_HOST localhost
 ENV OUTPUT_PORT 9000

@@ -1,10 +1,8 @@
-Cassandra in Docker( BY SPOTIFY )
+Cassandra in Docker
 ===
 
 This repository provides everything you need to run Cassandra in Docker, and is tuned for fast
 container startup.
-
-Additionally built ontop of phusion base image of ubuntu
 
 Why?
 ---
