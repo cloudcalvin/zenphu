@@ -1,27 +1,27 @@
 #zenphu :: Zenaptix-Phusion
 
 # Pull base image.
-FROM phusion/baseimage:latest
+FROM phusion/baseimage:0.9.17
 
 MAINTAINER Calvin Maree , cloudcalvin@me.com
 
 # RUN apt-get update
 
 #Install Java
-ENV JAVA_HOME /usr/local/java/jdk1.8.0_25
+ENV JAVA_HOME /usr/local/java/jdk1.8.0_60
 ENV PATH $PATH:$HOME/bin:$JAVA_HOME/bin
 RUN \ 
 	apt-get update && \
 	cd / && \
-	curl -v -j -k -L -H "Cookie: oraclelicense=accept-securebackup-cookie" http://download.oracle.com/otn-pub/java/jdk/8u25-b17/server-jre-8u25-linux-x64.tar.gz > server-jre-8u25-linux-x64.tar.gz && \
-	tar -xvf server-jre-8u25-linux-x64.tar.gz && \
-	rm -f -v -r server-jre-8u25-linux-x64.tar.gz && \
+	curl -v -j -k -L -H "Cookie: oraclelicense=accept-securebackup-cookie" http://download.oracle.com/otn-pub/java/jdk/8u60-b27/server-jre-8u60-linux-x64.tar.gz > server-jre-8u60-linux-x64.tar.gz && \
+	tar -xvf server-jre-8u60-linux-x64.tar.gz && \
+	rm -f -v -r server-jre-8u60-linux-x64.tar.gz && \
  	mkdir -p /usr/local/java && \
-	mv /jdk1.8.0_25/ /usr/local/java/ && \ 
-	rm -f server-jre-8u25-linux-x64 && \
+	mv /jdk1.8.0_60/ /usr/local/java/ && \ 
+	rm -f server-jre-8u60-linux-x64 && \
 	export JAVA_HOME && \
 	export PATH && \ 
-	update-alternatives --install "/usr/bin/java" "java" "/usr/local/java/jdk1.8.0_25/bin/java" 1
+	update-alternatives --install "/usr/bin/java" "java" "/usr/local/java/jdk1.8.0_60/bin/java" 1
 
 
 # Regenerate SSH host keys. baseimage-docker does not contain any, so you
@@ -37,3 +37,4 @@ RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 # Use baseimage-docker's init system.
 CMD ["/sbin/my_init"] 
+
