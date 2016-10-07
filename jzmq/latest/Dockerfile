@@ -6,9 +6,8 @@ RUN echo \
    'deb ftp://ftp.us.debian.org/debian/ jessie main\n \
     deb ftp://ftp.us.debian.org/debian/ jessie-updates main\n \
     deb http://security.debian.org jessie/updates main\n' \
-    > /etc/apt/sources.list
-
-RUN apt-get update && \
+    > /etc/apt/sources.list && \
+    apt-get update && \
     apt-get install -y build-essential make pkg-config libtool autoconf automake curl && \
     cd /opt && \
     curl http://download.zeromq.org/zeromq-4.0.5.tar.gz -o /opt/zeromq-4.0.5.tar.gz && \
