@@ -4,7 +4,7 @@ MAINTAINER Calvin Maree <cloudcalvin@me.com>
 
 RUN apt-get update && apt-get install -y build-essential make pkg-config libtool autoconf automake curl
 RUN cd /opt && \
-    curl http://download.zeromq.org/zeromq-4.0.5.tar.gz -o /opt/zeromq-4.0.5.tar.gz && \
+    curl -L http://download.zeromq.org/zeromq-4.0.5.tar.gz -o /opt/zeromq-4.0.5.tar.gz && \
     tar -zxf zeromq-4.0.5.tar.gz && \
     rm zeromq-4.0.5.tar.gz 
 RUN cd /opt/zeromq-4.0.5 && \
