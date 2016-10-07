@@ -1,7 +1,7 @@
 #zenphu :: Zenaptix-Phusion
 
 # Pull base image.
-FROM phusion/baseimage:0.9.17
+FROM phusion/baseimage:0.9.19
 
 MAINTAINER Calvin Maree , cloudcalvin@me.com
 
