@@ -2,15 +2,8 @@ FROM zenphu/oracle-server-jre:latest
 
 MAINTAINER Calvin Maree <cloudcalvin@me.com>
 
-RUN echo \
-   'deb ftp://ftp.us.debian.org/debian/ jessie main\n \
-    deb ftp://ftp.us.debian.org/debian/ jessie-updates main\n \
-    deb http://security.debian.org jessie/updates main\n' \
-    > /etc/apt/sources.list && \
-    chmod 755 /usr/bin/dpkg && \
-
-    apt-get update && \
-    apt-get install -y build-essential make pkg-config libtool autoconf automake curl
+RUN apt-get update
+RUN apt-get install -y build-essential make pkg-config libtool autoconf automake curl
 RUN cd /opt && \
     curl http://download.zeromq.org/zeromq-4.0.5.tar.gz -o /opt/zeromq-4.0.5.tar.gz && \
     tar -zxf zeromq-4.0.5.tar.gz && \
