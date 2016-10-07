@@ -13,8 +13,8 @@ RUN cd /opt/zeromq-4.0.5 && \
     make install && \
     ldconfig 
 RUN cd /opt && \
-    rm -rf zeromq-4.0.5 
-RUN curl -L https://github.com/zeromq/jzmq/archive/v3.1.0.tar.gz -o /opt/jzmq-3.1.0.tar.gz && \
+    rm -rf zeromq-4.0.5  && \
+    curl -L https://github.com/zeromq/jzmq/archive/v3.1.0.tar.gz -o /opt/jzmq-3.1.0.tar.gz && \
     tar -zxf jzmq-3.1.0.tar.gz && \
     rm jzmq-3.1.0.tar.gz
 RUN cd /opt/jzmq-3.1.0 && \
