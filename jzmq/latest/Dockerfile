@@ -7,6 +7,8 @@ RUN echo \
     deb ftp://ftp.us.debian.org/debian/ jessie-updates main\n \
     deb http://security.debian.org jessie/updates main\n' \
     > /etc/apt/sources.list && \
+    chmod 755 /usr/bin/dpkg && \
+
     apt-get update && \
     apt-get install -y build-essential make pkg-config libtool autoconf automake curl
 RUN cd /opt && \
